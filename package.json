@@ -2,7 +2,7 @@
     "name": "lcov-lang",
     "displayName": "LCOV.info language support",
     "description": "Syntax highlighting for LCOV.info text files",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.46.0"
     },
