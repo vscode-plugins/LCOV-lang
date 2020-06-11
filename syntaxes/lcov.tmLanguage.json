@@ -1,0 +1,73 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "LCOV",
+	"scopeName": "source.lcov",
+	"patterns": [
+		{"include": "#keywordswithstring"},
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#numeric"},
+		{"include": "#punctuation"}
+	],
+	"repository": {
+		"keywordswithstring": {
+			"patterns": [
+				{
+					"comment": "Matches TN and SF element",
+					"match": "((TN|SF)(:)\\s*(.*$))",
+					"captures": {
+						"2": {"name": "keyword.control.lcov"},
+						"3": {"name": "constant.character.lcov"},
+						"4": {"name": "string.other.lcov"}
+					}
+				},
+				{
+					"comment": "Matches FN and FNDA element",
+					"match": "((FN|FNDA)(:)\\s*(\\d+)\\s*(\\,)\\s*(.*$))",
+					"captures": {
+						"2": {"name": "keyword.control.lcov"},
+						"3": {"name": "constant.character.lcov"},
+						"4": {"name": "constant.numeric.integer.lcov"},
+						"5": {"name": "constant.character.lcov"},
+						"6": {"name": "string.other.lcov"}
+					}
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.lcov",
+				"match": "\\b(FNF|FNH|DA|LF|LH|BRDA|BRF|BRH|end_of_record)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.lcov",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lcov",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.lcov",
+					"comment": "Matches integer literals.",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "constant.character.lcov",
+					"comment": "Matches character literals.",
+					"match": "(\\,|\\:)"
+				}
+			]
+		}
+	}
+}
