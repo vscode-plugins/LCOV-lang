@@ -3,12 +3,26 @@
     "displayName": "LCOV.info language support",
     "description": "Syntax highlighting for LCOV.info text files",
     "version": "1.0.0",
+    "icon": "lcovlang.gif",
     "engines": {
-        "vscode": "^1.46.0"
+        "vscode": "^1.20.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "keywords": [
+        "Programming languages",
+        "LCOV"
+    ],
+    "publisher": "SergeLamikhov",
+    "license": "See license in LICENSE.txt",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vscode-plugins/LCOV-lang.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vscode-plugins/LCOV-lang/issues"
+    },
     "contributes": {
         "languages": [{
             "id": "lcov",
@@ -21,9 +35,5 @@
             "scopeName": "source.lcov",
             "path": "./syntaxes/lcov.tmLanguage.json"
         }]
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/vscode-plugins/LCOV-lang.git"
     }
 }
