@@ -21,5 +21,9 @@
             "scopeName": "source.lcov",
             "path": "./syntaxes/lcov.tmLanguage.json"
         }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vscode-plugins/LCOV-lang.git"
     }
 }
